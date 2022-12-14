@@ -4,20 +4,7 @@ import Todos from "./components/Todos";
 import {useState} from 'react';
 
 function App() {
-  const [todos,setTodos] = useState([
-    {
-      id:1,
-      task: 'Cook'
-    },
-    {
-      id:2,
-      task: 'Workout'
-    },
-    {
-      id:3,
-      task: 'Online Games'
-    }
-  ]);
+  const [todos,setTodos] = useState([]);
   const onAdd = (task) => {
     const newTask = {id:todos.length + 1, task:task};
     setTodos([...todos, newTask]);
